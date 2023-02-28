@@ -1,0 +1,10 @@
+^C:\USERS\VLADZH\DOCUMENTS\УЧЕБА\ПРАКТИКА СИСТЕМНОЕ\PRAKT5\BUILD\CMAKEFILES\ACD69690242E2897C2CDE2DC2BE30065\GENERATE.STAMP.RULE
+setlocal
+"C:\Program Files\CMake\bin\cmake.exe" "-SC:/Users/vladzh/Documents/учеба/практика системное/prakt5" "-BC:/Users/vladzh/Documents/учеба/практика системное/prakt5/build" --check-stamp-list CMakeFiles/generate.stamp.list --vs-solution-file "C:/Users/vladzh/Documents/учеба/практика системное/prakt5/build/prakt5.sln"
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal & call :cmErrorLevel %errorlevel% & goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd

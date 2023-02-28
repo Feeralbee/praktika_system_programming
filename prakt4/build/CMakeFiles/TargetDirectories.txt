@@ -1,0 +1,3 @@
+C:/Users/vladzh/Documents/учеба/практика системное/prakt4/build/CMakeFiles/prakt4.dir
+C:/Users/vladzh/Documents/учеба/практика системное/prakt4/build/CMakeFiles/ALL_BUILD.dir
+C:/Users/vladzh/Documents/учеба/практика системное/prakt4/build/CMakeFiles/ZERO_CHECK.dir

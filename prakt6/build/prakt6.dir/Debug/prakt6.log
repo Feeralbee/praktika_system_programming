@@ -1,0 +1,5 @@
+﻿  main.cpp
+C:\Users\vladzh\Documents\учеба\практика системное\prakt6\main.cpp(65,14): warning C4101: ps: неиспользованная локальная переменная
+C:\Users\vladzh\Documents\учеба\практика системное\prakt6\main.cpp(104): warning C4715: WindowProcessMessages: значение возвращается не при всех путях выполнения
+C:\Users\vladzh\Documents\учеба\практика системное\prakt6\main.cpp(150): warning C4715: WindowProcessMessages2: значение возвращается не при всех путях выполнения
+  prakt6.vcxproj -> C:\Users\vladzh\Documents\учеба\практика системное\prakt6\build\Debug\prakt6.exe

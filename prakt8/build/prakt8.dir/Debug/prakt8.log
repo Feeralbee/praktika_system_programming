@@ -1,0 +1,3 @@
+﻿  main.cpp
+C:\Users\vladzh\Documents\учеба\практика системное\prakt8\main.cpp(151): warning C4715: WindowProcessMessages: значение возвращается не при всех путях выполнения
+  prakt8.vcxproj -> C:\Users\vladzh\Documents\учеба\практика системное\prakt8\build\Debug\prakt8.exe

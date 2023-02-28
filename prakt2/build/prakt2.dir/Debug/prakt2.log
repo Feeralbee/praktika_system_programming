@@ -1,0 +1,5 @@
+﻿  main.cpp
+C:\Users\vladzh\Documents\учеба\практика системное\prakt2\main.cpp(191,27): warning C4244: аргумент: преобразование "LRESULT" в "int", возможна потеря данных
+C:\Users\vladzh\Documents\учеба\практика системное\prakt2\main.cpp(193,27): warning C4244: аргумент: преобразование "LRESULT" в "int", возможна потеря данных
+C:\Users\vladzh\Documents\учеба\практика системное\prakt2\main.cpp(195,27): warning C4244: аргумент: преобразование "LRESULT" в "int", возможна потеря данных
+  prakt2.vcxproj -> C:\Users\vladzh\Documents\учеба\практика системное\prakt2\build\Debug\prakt2.exe
