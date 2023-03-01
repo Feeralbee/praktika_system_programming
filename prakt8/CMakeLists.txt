@@ -9,4 +9,6 @@ add_executable(prakt8 WIN32
 	main.cpp
 )
 
+file(COPY files DESTINATION ${CMAKE_RUNTIME_OUTPUT_DIRECTORY}/)
+
 add_definitions(-DUNICODE -D_UNICODE)

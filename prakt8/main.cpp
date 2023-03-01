@@ -41,6 +41,13 @@ int WINAPI WinMain(HINSTANCE currentInstance, HINSTANCE previousInstance, PSTR c
 
 	CreateWindow(L"button", L"История", WS_VISIBLE | WS_CHILD, 10, 10, 70, 20, hwndA, (HMENU)menu::button, currentInstance, NULL);
 
+	HANDLE hIcon = LoadImage(0, L"G:\\Отчет\\Иллюстрации\\icon.ico", IMAGE_ICON, 0, 0, LR_DEFAULTSIZE | LR_LOADFROMFILE);
+	if (hIcon) {
+		//Change both icons to the same icon handle.
+		SendMessage(hwndA, WM_SETICON, ICON_SMALL, (LPARAM)hIcon);
+		SendMessage(hwndA, WM_SETICON, ICON_BIG, (LPARAM)hIcon);
+	}
+
 	HMENU menu = CreateMenu();
 	HMENU popmenu = CreatePopupMenu();
 	AppendMenu(menu, MF_STRING | MF_POPUP, (UINT_PTR)popmenu, L"&Программы");
@@ -107,37 +114,37 @@ LRESULT CALLBACK WindowProcessMessages(HWND hwnd, UINT msg, WPARAM param, LPARAM
 		}
 		else if ((menu)param == menu::prog1)
 		{
-			WinExec("prakt1.exe", 1);
+			WinExec("G:\\Проекты\\module1\\x64\\Debug\\prakt1.exe", 1);
 			history += L"Был открыт модуль 1\n";
 		}
 		else if ((menu)param == menu::prog2)
 		{
-			WinExec("prakt2.exe", 1);
+			WinExec("G:\\Проекты\\module2\\build\\Debug\\prakt2.exe", 1);
 			history += L"Был открыт модуль 2\n";
 		}
 		else if ((menu)param == menu::prog3)
 		{
-			WinExec("prakt3.exe", 1);
+			WinExec("G:\\Проекты\\module3\\build\\Debug\\prakt3.exe", 1);
 			history += L"Был открыт модуль 3\n";
 		}
 		else if ((menu)param == menu::prog4)
 		{
-			WinExec("prakt4.exe", 1);
+			WinExec("G:\\Проекты\\module4\\build\\Debug\\prakt4.exe", 1);
 			history += L"Был открыт модуль 4\n";
 		}
 		else if ((menu)param == menu::prog5)
 		{
-			WinExec("prakt5.exe", 1);
+			WinExec("G:\\Проекты\\module5\\build\\Debug\\prakt5.exe", 1);
 			history += L"Был открыт модуль 5\n";
 		}
 		else if ((menu)param == menu::prog6)
 		{
-			WinExec("prakt6.exe", 1);
+			WinExec("G:\\Проекты\\module6\\build\\Debug\\prakt6.exe", 1);
 			history += L"Был открыт модуль 6\n";
 		}
 		else if ((menu)param == menu::prog7)
 		{
-			WinExec("prakt7.exe", 1);
+			WinExec("G:\\Проекты\\module7\\build\\Debug\\prakt7.exe", 1);
 			history += L"Был открыт модуль 7\n";
 		}
 		break;
