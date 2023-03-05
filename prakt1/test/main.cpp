@@ -7,47 +7,11 @@
 #include <string>
 #include <vector>
 
-LRESULT CALLBACK WindowProc(HWND hwnd, UINT uMsg, WPARAM wParam, LPARAM lParam);
-
 INT_PTR CALLBACK DialogProc(HWND hDlg, UINT uMsg, WPARAM wParam, LPARAM lParam);
 
 int WINAPI wWinMain(HINSTANCE hInstance, HINSTANCE, PWSTR pCmdLine, int nCmdShow)
 {
-    // Register the window class.
-    const wchar_t CLASS_NAME[] = L"Sample Window Class";
-
-    WNDCLASS wc = {};
-
-    wc.lpfnWndProc = WindowProc;
-    wc.hInstance = hInstance;
-    wc.lpszClassName = CLASS_NAME;
-
-    RegisterClass(&wc);
-
-    // Create the window.
-
-    HWND hwnd = CreateWindowEx(
-        0,                              // Optional window styles.
-        CLASS_NAME,                     // Window class
-        L"task1",    // Window text
-        WS_OVERLAPPEDWINDOW,            // Window style
-
-        // Size and position
-        CW_USEDEFAULT, CW_USEDEFAULT, 800, 400,
-
-        NULL,       // Parent window    
-        NULL,       // Menu
-        hInstance,  // Instance handle
-        NULL        // Additional application data
-    );
-
-    if (hwnd == NULL)
-    {
-        return 0;
-    }
-
-    ShowWindow(hwnd, nCmdShow);
-   DialogBox(hInstance, MAKEINTRESOURCE(IDD_DIALOG), hwnd, DialogProc);
+   DialogBox(hInstance, MAKEINTRESOURCE(IDD_DIALOG), NULL, DialogProc);
 
     MSG msg = {};
     while (GetMessage(&msg, NULL, 0, 0))
@@ -57,29 +21,6 @@ int WINAPI wWinMain(HINSTANCE hInstance, HINSTANCE, PWSTR pCmdLine, int nCmdShow
     }
 
     return 0;
-}
-
-LRESULT CALLBACK WindowProc(HWND hwnd, UINT uMsg, WPARAM wParam, LPARAM lParam)
-{
-    switch (uMsg)
-    {
-    case WM_DESTROY:
-        PostQuitMessage(0);
-        return 0;
-
-    case WM_PAINT:
-    {
-        PAINTSTRUCT ps;
-        HDC hdc = BeginPaint(hwnd, &ps);
-
-        FillRect(hdc, &ps.rcPaint, (HBRUSH)(COLOR_WINDOW + 1));
-
-        EndPaint(hwnd, &ps);
-    }
-    return 0;
-
-    }
-    return DefWindowProc(hwnd, uMsg, wParam, lParam);
 }
 
 INT_PTR CALLBACK DialogProc(HWND hDlg, UINT uMsg, WPARAM wParam, LPARAM lParam)
@@ -147,6 +88,7 @@ INT_PTR CALLBACK DialogProc(HWND hDlg, UINT uMsg, WPARAM wParam, LPARAM lParam)
         else if (wParam == IDCANCEL)
         {
             EndDialog(hDlg, 1);
+            PostQuitMessage(0);
         }
 
     }
